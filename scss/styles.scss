@@ -1,0 +1,21 @@
+@import 'reset';
+
+@import 'variables';
+
+@import 'small-default';
+
+/*
+
+To prevent potential parsing errors caused by closing bracket of media queries
+I moved the media queries to wrap the contents of the medium and large files. I picked
+This technique was taken from Paul Cheney's Hand's on Responsive Web Design pluralsight course.
+
+*/
+
+@media only screen and (min-width: 560px) {
+  @import 'medium';
+}
+
+@media only screen and (min-width: 1140px) {
+  @import 'large';
+}

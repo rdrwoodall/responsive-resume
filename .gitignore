@@ -1,0 +1,18 @@
+## LOCAL PROJECT
+dist/
+
+## NODE
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependency directories
+node_modules/
+
+## SCSS/SASS
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
