@@ -10,3 +10,105 @@ html {
   -ms-box-sizing: border-box;
   box-sizing: border-box;
 }
+
+/* BODY */
+
+body {
+
+}
+
+/* HEADER */
+
+header {
+  background-color: $primary;
+  color: $secondary;
+  text-align: center;
+  padding: $gutter;
+
+  div.avatar {
+    max-width: 50%;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+
+  img {
+    width: 75%;
+    height: 75%;
+    border-radius: 45%;
+  }
+
+  h1 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: $gutter 0;
+  }
+
+  h3 {
+    margin: $gutter 0;
+    font-size: 1.15em;
+    color: $secondary
+  }
+
+  section.social {
+    padding: 1rem;
+
+    li {
+      display: inline-block;
+      margin: 0 $gutter;
+    }
+
+    a {
+      color: $secondary;
+      text-decoration: none;
+    }
+  }
+}
+
+/* NAVIGATION */
+
+nav {
+  position: absolute;
+  top: $gutter;
+  right: $gutter + 2%;
+
+  div.icons {
+    text-align: right;
+  }
+
+  i.nav-expander {
+    display: block;
+  }
+
+  i.nav-collapser {
+    display: none;
+  }
+
+  ul {
+    display: none;
+  }
+}
+
+nav:hover {
+  i.nav-expander {
+    display: none;
+  }
+
+  i.nav-collapser {
+    display: block;
+  }
+  ul {
+    display: block;
+  }
+}
+
+/* MAIN */
+
+main {
+  
+}
+
+/* FOOTER */
+
+footer {
+
+}
