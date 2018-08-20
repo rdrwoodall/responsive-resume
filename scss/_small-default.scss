@@ -71,33 +71,26 @@ nav {
   top: $gutter;
   right: $gutter + 2%;
 
-  div.icons {
+  &:hover {
+    i.icon {
+      @include icon(times);
+    }
+
+    ul {
+      display: block;
+    }
+  }
+
+  div.toggle-icon {
     text-align: right;
   }
 
-  i.nav-expander {
-    display: block;
-  }
-
-  i.nav-collapser {
-    display: none;
+  i.icon {
+    @include icon(bars);
   }
 
   ul {
     display: none;
-  }
-}
-
-nav:hover {
-  i.nav-expander {
-    display: none;
-  }
-
-  i.nav-collapser {
-    display: block;
-  }
-  ul {
-    display: block;
   }
 }
 
