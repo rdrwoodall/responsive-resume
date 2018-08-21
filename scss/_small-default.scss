@@ -69,28 +69,50 @@ header {
 nav {
   position: absolute;
   top: $gutter;
-  right: $gutter + 2%;
+  right: $gutter;
 
   &:hover {
-    i.icon {
+    background-color: $quinary;
+    border: 1px solid darken($color: #ffffff, $amount: 10%);
+
+    i.toggler {
       @include icon(times);
+      color: $secondary;
     }
 
-    ul {
+    div.toggle-container {
       display: block;
+      padding: .15rem;
     }
   }
 
-  div.toggle-icon {
+  div.toggler-container {
     text-align: right;
   }
 
-  i.icon {
+  i.toggler {
     @include icon(bars);
+    padding: .15rem .15rem 0 0;
   }
 
-  ul {
+  div.toggle-container {
     display: none;
+  }
+
+  a {
+    color: $secondary;
+    text-decoration: none;
+  }
+  
+  section.links li {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  section.social li {
+    text-align: center;
+    display: inline-block;
+    width: 31%;
   }
 }
 
