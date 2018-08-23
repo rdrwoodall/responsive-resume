@@ -2388,6 +2388,10 @@ html {
   box-sizing: border-box; }
 
 /* BODY */
+body {
+  font-family: "Assistant", sans-serif;
+  font-weight: 300; }
+
 /* HEADER */
 header {
   background-color: #04724d;
@@ -2404,7 +2408,7 @@ header {
     border-radius: 45%; }
   header h1 {
     font-size: 1.5em;
-    font-weight: bold;
+    font-weight: 600;
     margin: 2% 0; }
   header h3 {
     margin: 2% 0;
