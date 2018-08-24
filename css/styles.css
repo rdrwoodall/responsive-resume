@@ -2394,7 +2394,7 @@ body {
 
 /* HEADER */
 header {
-  background-color: #04724d;
+  background-color: black;
   color: #f4f4f9;
   text-align: center;
   padding: 2%; }
@@ -2451,7 +2451,8 @@ nav {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    padding: .15rem .15rem 0 0; }
+    padding: .15rem .15rem 0 0;
+    color: #f4f4f9; }
   nav div.toggle-container {
     display: none; }
   nav a {
@@ -2466,6 +2467,23 @@ nav {
     width: 31%; }
 
 /* MAIN */
+main {
+  font-size: 1rem; }
+  main h3 {
+    background-color: #96cac7;
+    color: #f4f4f9;
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 1.25rem; }
+  main section {
+    padding: .5rem .25rem;
+    line-height: 1.25rem; }
+  main span.highlight {
+    display: block;
+    font-weight: 600; }
+  main section.about-dev p {
+    padding: .5rem 0; }
+
 /* FOOTER */
 /*
 

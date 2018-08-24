@@ -21,7 +21,7 @@ body {
 /* HEADER */
 
 header {
-  background-color: $primary;
+  background-color: $quaternary;
   color: $secondary;
   text-align: center;
   padding: $gutter;
@@ -94,6 +94,7 @@ nav {
   i.toggler {
     @include icon(bars);
     padding: .15rem .15rem 0 0;
+    color: $secondary;
   }
 
   div.toggle-container {
@@ -120,7 +121,29 @@ nav {
 /* MAIN */
 
 main {
-  
+  font-size: 1rem;
+
+  h3 {
+    background-color: darken($color: $tertiary, $amount: 10%);
+    color: $secondary;
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 1.25rem;
+  }
+
+  section {
+    padding: .5rem .25rem;
+    line-height: 1.25rem;
+  }
+
+  span.highlight {
+    display: block;
+    font-weight: $boldWeight;
+  }
+
+  section.about-dev p {
+    padding: .5rem 0;
+  }
 }
 
 /* FOOTER */
