@@ -122,18 +122,18 @@ nav {
 
 main {
   font-size: 1rem;
+  text-align: center;
 
   h3 {
     background-color: darken($color: $tertiary, $amount: 10%);
     color: $secondary;
-    text-align: center;
     padding: 2rem 0;
     font-size: 1.25rem;
   }
 
   section {
     padding: .5rem .25rem;
-    line-height: 1.25rem;
+    line-height: 1.5rem;
   }
 
   span.highlight {
@@ -141,20 +141,30 @@ main {
     font-weight: $boldWeight;
   }
 
+  span.newline {
+    display: block;
+    margin-top: -.5rem;
+  }
+
   section.about-dev {
     p {
       padding: .5rem 0;
-      text-align: center;
     }    
   }
 
   section.skills {
-    text-align: center;
-    
     h4 {
       font-weight: $boldWeight;
-      padding: .5rem 0;      
+      // padding: .5rem 0;      
     }
+
+    div {
+      margin-top: .5rem;
+    }
+  }
+
+  section.experience {
+
   }
 }
 

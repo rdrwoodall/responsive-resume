@@ -2468,27 +2468,28 @@ nav {
 
 /* MAIN */
 main {
-  font-size: 1rem; }
+  font-size: 1rem;
+  text-align: center; }
   main h3 {
     background-color: #96cac7;
     color: #f4f4f9;
-    text-align: center;
     padding: 2rem 0;
     font-size: 1.25rem; }
   main section {
     padding: .5rem .25rem;
-    line-height: 1.25rem; }
+    line-height: 1.5rem; }
   main span.highlight {
     display: block;
     font-weight: 600; }
+  main span.newline {
+    display: block;
+    margin-top: -.5rem; }
   main section.about-dev p {
-    padding: .5rem 0;
-    text-align: center; }
-  main section.skills {
-    text-align: center; }
-    main section.skills h4 {
-      font-weight: 600;
-      padding: .5rem 0; }
+    padding: .5rem 0; }
+  main section.skills h4 {
+    font-weight: 600; }
+  main section.skills div {
+    margin-top: .5rem; }
 
 /* FOOTER */
 /*
