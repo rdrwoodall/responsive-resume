@@ -2482,7 +2482,13 @@ main {
     display: block;
     font-weight: 600; }
   main section.about-dev p {
-    padding: .5rem 0; }
+    padding: .5rem 0;
+    text-align: center; }
+  main section.skills {
+    text-align: center; }
+    main section.skills h4 {
+      font-weight: 600;
+      padding: .5rem 0; }
 
 /* FOOTER */
 /*

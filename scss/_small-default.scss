@@ -114,7 +114,7 @@ nav {
   section.social li {
     text-align: center;
     display: inline-block;
-    width: 31%;
+    width: (33% - $gutter);
   }
 }
 
@@ -141,8 +141,20 @@ main {
     font-weight: $boldWeight;
   }
 
-  section.about-dev p {
-    padding: .5rem 0;
+  section.about-dev {
+    p {
+      padding: .5rem 0;
+      text-align: center;
+    }    
+  }
+
+  section.skills {
+    text-align: center;
+    
+    h4 {
+      font-weight: $boldWeight;
+      padding: .5rem 0;      
+    }
   }
 }
 
