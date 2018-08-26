@@ -2490,6 +2490,57 @@ main {
     font-weight: 600; }
   main section.skills div {
     margin-top: .5rem; }
+  main section.skills div:last-child {
+    margin-bottom: .5rem; }
+  main section.experience {
+    padding: 1.5rem .5rem; }
+    main section.experience details {
+      text-align: left; }
+      main section.experience details summary::-webkit-details-marker {
+        display: none; }
+      main section.experience details summary::before {
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        display: inline-block;
+        content: "";
+        color: #b8dbd9;
+        vertical-align: middle;
+        margin-right: 1rem;
+        /*
+          NOTE: Why am I not able to just set the content to icon(plus)?
+          What is the fa-icon() include doing differently for me here in 
+          this situation vs above when using icons?
+        */ }
+      main section.experience details.company[open] > summary::before,
+      main section.experience details.group[open] > summary::before {
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        content: ""; }
+      main section.experience details.company[open] div {
+        margin-left: 1.25rem; }
+      main section.experience details.company[open] p,
+      main section.experience details.company[open] time {
+        padding-left: 0.5rem; }
+      main section.experience details.group[open] div {
+        margin-left: 1.5rem; }
+      main section.experience details.group[open] p,
+      main section.experience details.group[open] time {
+        padding-left: 0.75rem; }
+      main section.experience details.company[open] details summary {
+        margin-left: 0.5rem; }
+      main section.experience details summary:focus {
+        outline: none; }
+      main section.experience details summary span.title,
+      main section.experience details.group summary {
+        font-weight: 600; }
 
 /* FOOTER */
 /*
