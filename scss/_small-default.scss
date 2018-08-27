@@ -154,8 +154,7 @@ main {
 
   section.skills {
     h4 {
-      font-weight: $boldWeight;
-      // padding: .5rem 0;      
+      font-weight: $boldWeight; 
     }
 
     div {
@@ -170,65 +169,92 @@ main {
   section.experience {
     padding: 1.5rem .5rem;
 
-    // TODO: refactor nested details styles, make better use of nesting where applicable
     details {
       text-align: left;
 
-      summary::-webkit-details-marker {
-        display: none
+      summary {
+        &::-webkit-details-marker {
+          display: none
+        }
+        
+        &:focus {
+          outline: none;
+        }
+
+        &::before {
+          @include fa-icon(); // FIXME: Need to understand what this line is really doing, see note below
+          display: inline-block;
+          content: $fa-var-plus;
+          color: $tertiary;
+          vertical-align: middle;
+          margin-right: 1rem;
+    
+          /*
+            NOTE: Why am I not able to just set the content to icon(plus)?
+            What is the fa-icon() include doing differently for me here in 
+            this situation vs above when using icons?
+          */
+        }
       }
 
-      summary::before {
-        @include fa-icon(); // FIXME: Need to understand what this line is really doing, see note below
-        display: inline-block;
-        content: $fa-var-plus;
-        color: $tertiary;
-        vertical-align: middle;
-        margin-right: 1rem;
-  
-        /*
-          NOTE: Why am I not able to just set the content to icon(plus)?
-          What is the fa-icon() include doing differently for me here in 
-          this situation vs above when using icons?
-        */
+      &[open] {
+        // FIXME: need to understand why '>' was needed to stop nested details from picking up parent summary icon
+        & > summary::before {
+          @include fa-icon();
+          content: $fa-var-minus;
+        }
       }
 
-      // FIXME: need to understand why '>' was needed to stop nested details from picking up parent summary icon
-      &.company[open] > summary::before,
-      &.group[open] > summary::before {
-        @include fa-icon();
-        content: $fa-var-minus;
-      }
-      
-      &.company[open] div {
-        margin-left: 1.25rem;
+      &.company[open] {
+        div {
+          margin-left: 1.25rem;
+        }
+
+        p,
+        time {
+          padding-left: 0.5rem;
+          margin: 0.35rem 0;
+        }
+
+        details summary {
+          margin-left: 0.5rem;
+        }
       }
 
-      &.company[open] p,
-      &.company[open] time {
-        padding-left: 0.5rem;
+      &.group[open] {
+        div {
+          margin-top: .35rem;
+          margin-left: 1.5rem;
+        }
+
+        p,
+        time {
+          padding-left: 0.75rem;
+        }
       }
 
-      &.group[open] div {
-        margin-left: 1.5rem;
-      }
-
-      &.group[open] p,
-      &.group[open] time {
-        padding-left: 0.75rem;
-      }
-
-      &.company[open] details summary {
-        margin-left: 0.5rem;
-      }
-
-      summary:focus {
-        outline: none;
-      }
-
-      summary span.title,
+      span.name,
+      span.group-tech,
       &.group summary {
         font-weight: $boldWeight;
+      }
+
+      time,
+      p.title {
+        font-size: 0.9rem;
+        color: $quinary;
+      }
+
+      time::before {
+        @include fa-icon();
+        content: $fa-var-clock-o;
+        margin-right: 0.75rem;
+      }
+
+      p.title::before {
+        @include fa-icon();
+        content: $fa-var-user;
+        margin-right: 0.75rem;
       }
     }    
   }
