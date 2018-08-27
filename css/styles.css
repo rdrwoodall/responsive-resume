@@ -2565,6 +2565,25 @@ main {
         -moz-osx-font-smoothing: grayscale;
         content: "";
         margin-right: 0.75rem; }
+  main section.education div {
+    padding: .5rem 0.25rem;
+    margin: .35rem 0; }
+  main section.education span.name {
+    font-weight: 600; }
+  main section.education time::before {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "";
+    margin-right: 0.75rem; }
+  main section.education time {
+    display: inline-block;
+    font-size: 0.9rem;
+    color: #586f7c;
+    margin: .35rem 0; }
 
 /* FOOTER */
 /*

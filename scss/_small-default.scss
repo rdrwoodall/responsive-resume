@@ -258,6 +258,30 @@ main {
       }
     }    
   }
+
+  section.education {
+    div {
+      padding: .5rem 0.25rem;
+      margin: .35rem 0;
+    }
+
+    span.name {
+      font-weight: $boldWeight;
+    }
+
+    time::before {
+      @include fa-icon();
+      content: $fa-var-clock-o;
+      margin-right: 0.75rem;
+    }
+
+    time {
+      display: inline-block;
+      font-size: 0.9rem;
+      color: $quinary;
+      margin: .35rem 0;
+    }
+  }
 }
 
 /* FOOTER */
