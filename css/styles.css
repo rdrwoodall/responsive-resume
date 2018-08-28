@@ -59,7 +59,7 @@ table {
   font-weight: normal;
   font-style: normal; }
 
-.fa, nav:hover i.toggler, nav i.toggler {
+.fa, header section.social a.email, header section.social a.github, header section.social a.linked-in, nav:hover i.toggler, nav i.toggler {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
@@ -116,10 +116,10 @@ table {
 .fa-pull-right {
   float: right; }
 
-.fa.fa-pull-left, nav i.fa-pull-left.toggler {
+.fa.fa-pull-left, header section.social a.fa-pull-left.email, header section.social a.fa-pull-left.github, header section.social a.fa-pull-left.linked-in, nav i.fa-pull-left.toggler {
   margin-right: .3em; }
 
-.fa.fa-pull-right, nav i.fa-pull-right.toggler {
+.fa.fa-pull-right, header section.social a.fa-pull-right.email, header section.social a.fa-pull-right.github, header section.social a.fa-pull-right.linked-in, nav i.fa-pull-right.toggler {
   margin-left: .3em; }
 
 /* Deprecated as of 4.4.0 */
@@ -129,10 +129,10 @@ table {
 .pull-left {
   float: left; }
 
-.fa.pull-left, nav i.pull-left.toggler {
+.fa.pull-left, header section.social a.pull-left.email, header section.social a.pull-left.github, header section.social a.pull-left.linked-in, nav i.pull-left.toggler {
   margin-right: .3em; }
 
-.fa.pull-right, nav i.pull-right.toggler {
+.fa.pull-right, header section.social a.pull-right.email, header section.social a.pull-right.github, header section.social a.pull-right.linked-in, nav i.pull-right.toggler {
   margin-left: .3em; }
 
 .fa-spin {
@@ -673,7 +673,7 @@ nav:hover i.toggler:before {
 .fa-facebook:before {
   content: ""; }
 
-.fa-github:before {
+.fa-github:before, header section.social a.github:before {
   content: ""; }
 
 .fa-unlock:before {
@@ -841,10 +841,10 @@ nav i.toggler:before {
 .fa-sort-asc:before {
   content: ""; }
 
-.fa-envelope:before {
+.fa-envelope:before, header section.social a.email:before {
   content: ""; }
 
-.fa-linkedin:before {
+.fa-linkedin:before, header section.social a.linked-in:before {
   content: ""; }
 
 .fa-rotate-left:before,
@@ -2399,29 +2399,51 @@ header {
   text-align: center;
   padding: 2%; }
   header div.avatar {
-    max-width: 50%;
-    margin: 0 auto;
-    padding: 1rem; }
+    margin-top: 2%;
+    padding-top: 1.5rem; }
   header img {
-    width: 75%;
-    height: 75%;
-    border-radius: 45%; }
+    width: 25%;
+    height: 25%;
+    border-radius: 25%; }
   header h1 {
     font-size: 1.5em;
     font-weight: 600;
     margin: 2% 0; }
   header h3 {
     margin: 2% 0;
+    padding: .5rem;
     font-size: 1.15em;
     color: #f4f4f9; }
   header section.social {
-    padding: 1rem; }
+    margin: 2% 0; }
     header section.social li {
       display: inline-block;
-      margin: 0 2%; }
+      margin: 0 2%;
+      font-size: 1.75rem; }
     header section.social a {
       color: #f4f4f9;
       text-decoration: none; }
+    header section.social a.email {
+      display: inline-block;
+      font: normal normal normal 14px/1 FontAwesome;
+      font-size: inherit;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    header section.social a.github {
+      display: inline-block;
+      font: normal normal normal 14px/1 FontAwesome;
+      font-size: inherit;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    header section.social a.linked-in {
+      display: inline-block;
+      font: normal normal normal 14px/1 FontAwesome;
+      font-size: inherit;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
 
 /* NAVIGATION */
 nav {
@@ -2452,7 +2474,8 @@ nav {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     padding: .15rem .15rem 0 0;
-    color: #f4f4f9; }
+    color: #f4f4f9;
+    font-size: 1.25rem; }
   nav div.toggle-container {
     display: none; }
   nav a {
