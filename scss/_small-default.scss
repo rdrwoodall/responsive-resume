@@ -81,22 +81,27 @@ header {
 /* NAVIGATION */
 
 nav {
-  position: absolute;
+  position: fixed;
   top: $gutter;
   right: $gutter;
+  padding: 0.15rem;
 
   &:hover {
-    background-color: $quinary;
-    border: 1px solid darken($color: #ffffff, $amount: 10%);
+    min-width: 100% - ($gutter * 2);
+    min-height: 40% - $gutter;
+    background-color: $quaternary;
+    border: 1px solid $secondary;
 
     i.toggler {
       @include icon(times);
       color: $secondary;
+      font-size: 1.3rem;
     }
 
     div.toggle-container {
       display: block;
       padding: .15rem;
+      margin-right: 1.15rem;
     }
   }
 
@@ -106,13 +111,12 @@ nav {
 
   i.toggler {
     @include icon(bars);
-    padding: .15rem .15rem 0 0;
     color: $secondary;
     font-size: 1.25rem;
   }
 
   div.toggle-container {
-    display: none;
+    display: none; // FIXME: for dev only, change back to none
   }
 
   a {
@@ -120,15 +124,49 @@ nav {
     text-decoration: none;
   }
   
-  section.links li {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+  section.links {
+    li::before {
+      @include fa-icon();
+      display: inline-block;
+      content: $fa-var-file-pdf-o;
+      color: $secondary;
+      vertical-align: middle;
+      margin-right: 1rem;
+    }
+
+    li {
+      text-align: center;
+      font-size: 1.15rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid $secondary;
+    }
   }
 
-  section.social li {
-    text-align: center;
-    display: inline-block;
-    width: (33% - $gutter);
+  section.social {
+    li {
+      text-align: center;
+      display: inline-block;
+      width: (33% - $gutter);
+      font-size: 1.5rem;
+      padding: 1rem 0;
+    }
+
+    a {
+      color: $secondary;
+      text-decoration: none;
+    }
+
+    a.email {
+      @include icon(envelope);
+    }
+
+    a.github {
+      @include icon(github);
+    }
+
+    a.linked-in {
+      @include icon(linkedin);
+    }
   }
 }
 

@@ -59,7 +59,7 @@ table {
   font-weight: normal;
   font-style: normal; }
 
-.fa, header section.social a.email, header section.social a.github, header section.social a.linked-in, nav:hover i.toggler, nav i.toggler {
+.fa, header section.social a.email, header section.social a.github, header section.social a.linked-in, nav:hover i.toggler, nav i.toggler, nav section.social a.email, nav section.social a.github, nav section.social a.linked-in {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
@@ -116,10 +116,10 @@ table {
 .fa-pull-right {
   float: right; }
 
-.fa.fa-pull-left, header section.social a.fa-pull-left.email, header section.social a.fa-pull-left.github, header section.social a.fa-pull-left.linked-in, nav i.fa-pull-left.toggler {
+.fa.fa-pull-left, header section.social a.fa-pull-left.email, header section.social a.fa-pull-left.github, header section.social a.fa-pull-left.linked-in, nav i.fa-pull-left.toggler, nav section.social a.fa-pull-left.email, nav section.social a.fa-pull-left.github, nav section.social a.fa-pull-left.linked-in {
   margin-right: .3em; }
 
-.fa.fa-pull-right, header section.social a.fa-pull-right.email, header section.social a.fa-pull-right.github, header section.social a.fa-pull-right.linked-in, nav i.fa-pull-right.toggler {
+.fa.fa-pull-right, header section.social a.fa-pull-right.email, header section.social a.fa-pull-right.github, header section.social a.fa-pull-right.linked-in, nav i.fa-pull-right.toggler, nav section.social a.fa-pull-right.email, nav section.social a.fa-pull-right.github, nav section.social a.fa-pull-right.linked-in {
   margin-left: .3em; }
 
 /* Deprecated as of 4.4.0 */
@@ -129,10 +129,10 @@ table {
 .pull-left {
   float: left; }
 
-.fa.pull-left, header section.social a.pull-left.email, header section.social a.pull-left.github, header section.social a.pull-left.linked-in, nav i.pull-left.toggler {
+.fa.pull-left, header section.social a.pull-left.email, header section.social a.pull-left.github, header section.social a.pull-left.linked-in, nav i.pull-left.toggler, nav section.social a.pull-left.email, nav section.social a.pull-left.github, nav section.social a.pull-left.linked-in {
   margin-right: .3em; }
 
-.fa.pull-right, header section.social a.pull-right.email, header section.social a.pull-right.github, header section.social a.pull-right.linked-in, nav i.pull-right.toggler {
+.fa.pull-right, header section.social a.pull-right.email, header section.social a.pull-right.github, header section.social a.pull-right.linked-in, nav i.pull-right.toggler, nav section.social a.pull-right.email, nav section.social a.pull-right.github, nav section.social a.pull-right.linked-in {
   margin-left: .3em; }
 
 .fa-spin {
@@ -673,7 +673,7 @@ nav:hover i.toggler:before {
 .fa-facebook:before {
   content: ""; }
 
-.fa-github:before, header section.social a.github:before {
+.fa-github:before, header section.social a.github:before, nav section.social a.github:before {
   content: ""; }
 
 .fa-unlock:before {
@@ -841,10 +841,10 @@ nav i.toggler:before {
 .fa-sort-asc:before {
   content: ""; }
 
-.fa-envelope:before, header section.social a.email:before {
+.fa-envelope:before, header section.social a.email:before, nav section.social a.email:before {
   content: ""; }
 
-.fa-linkedin:before, header section.social a.linked-in:before {
+.fa-linkedin:before, header section.social a.linked-in:before, nav section.social a.linked-in:before {
   content: ""; }
 
 .fa-rotate-left:before,
@@ -2447,12 +2447,15 @@ header {
 
 /* NAVIGATION */
 nav {
-  position: absolute;
+  position: fixed;
   top: 2%;
-  right: 2%; }
+  right: 2%;
+  padding: 0.15rem; }
   nav:hover {
-    background-color: #586f7c;
-    border: 1px solid #e6e6e6; }
+    min-width: 96%;
+    min-height: 38%;
+    background-color: black;
+    border: 1px solid #f4f4f9; }
     nav:hover i.toggler {
       display: inline-block;
       font: normal normal normal 14px/1 FontAwesome;
@@ -2460,10 +2463,12 @@ nav {
       text-rendering: auto;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
-      color: #f4f4f9; }
+      color: #f4f4f9;
+      font-size: 1.3rem; }
     nav:hover div.toggle-container {
       display: block;
-      padding: .15rem; }
+      padding: .15rem;
+      margin-right: 1.15rem; }
   nav div.toggler-container {
     text-align: right; }
   nav i.toggler {
@@ -2473,7 +2478,6 @@ nav {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    padding: .15rem .15rem 0 0;
     color: #f4f4f9;
     font-size: 1.25rem; }
   nav div.toggle-container {
@@ -2481,13 +2485,53 @@ nav {
   nav a {
     color: #f4f4f9;
     text-decoration: none; }
+  nav section.links li::before {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: inline-block;
+    content: "";
+    color: #f4f4f9;
+    vertical-align: middle;
+    margin-right: 1rem; }
   nav section.links li {
-    margin-top: 1rem;
-    margin-bottom: 1rem; }
+    text-align: center;
+    font-size: 1.15rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid #f4f4f9; }
   nav section.social li {
     text-align: center;
     display: inline-block;
-    width: 31%; }
+    width: 31%;
+    font-size: 1.5rem;
+    padding: 1rem 0; }
+  nav section.social a {
+    color: #f4f4f9;
+    text-decoration: none; }
+  nav section.social a.email {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  nav section.social a.github {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  nav section.social a.linked-in {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
 
 /* MAIN */
 main {
