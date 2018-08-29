@@ -86,9 +86,8 @@ nav {
   right: $gutter;
   padding: 0.15rem;
 
-  &:hover {
+  &.clicked {
     min-width: 100% - ($gutter * 2);
-    min-height: 40% - $gutter;
     background-color: $quaternary;
     border: 1px solid $secondary;
 
@@ -116,7 +115,7 @@ nav {
   }
 
   div.toggle-container {
-    display: none; // FIXME: for dev only, change back to none
+    display: none;
   }
 
   a {
@@ -321,10 +320,18 @@ main {
       font-weight: $boldWeight;
     }
 
-    time::before {
+    p::before {
       @include fa-icon();
-      content: $fa-var-clock-o;
       margin-right: 0.75rem;
+      font-size: 1.35rem;
+    }
+
+    p.graduate::before {
+      content: $fa-var-graduation-cap;
+    }
+
+    p.non-graduate::before {
+      content: $fa-var-info-circle;
     }
 
     time {

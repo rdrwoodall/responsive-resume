@@ -59,7 +59,7 @@ table {
   font-weight: normal;
   font-style: normal; }
 
-.fa, header section.social a.email, header section.social a.github, header section.social a.linked-in, nav:hover i.toggler, nav i.toggler, nav section.social a.email, nav section.social a.github, nav section.social a.linked-in {
+.fa, header section.social a.email, header section.social a.github, header section.social a.linked-in, nav.clicked i.toggler, nav i.toggler, nav section.social a.email, nav section.social a.github, nav section.social a.linked-in {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
@@ -263,7 +263,7 @@ table {
 .fa-remove:before,
 .fa-close:before,
 .fa-times:before,
-nav:hover i.toggler:before {
+nav.clicked i.toggler:before {
   content: ""; }
 
 .fa-search-plus:before {
@@ -2451,12 +2451,11 @@ nav {
   top: 2%;
   right: 2%;
   padding: 0.15rem; }
-  nav:hover {
+  nav.clicked {
     min-width: 96%;
-    min-height: 38%;
     background-color: black;
     border: 1px solid #f4f4f9; }
-    nav:hover i.toggler {
+    nav.clicked i.toggler {
       display: inline-block;
       font: normal normal normal 14px/1 FontAwesome;
       font-size: inherit;
@@ -2465,7 +2464,7 @@ nav {
       -moz-osx-font-smoothing: grayscale;
       color: #f4f4f9;
       font-size: 1.3rem; }
-    nav:hover div.toggle-container {
+    nav.clicked div.toggle-container {
       display: block;
       padding: .15rem;
       margin-right: 1.15rem; }
@@ -2637,15 +2636,19 @@ main {
     margin: .35rem 0; }
   main section.education span.name {
     font-weight: 600; }
-  main section.education time::before {
+  main section.education p::before {
     display: inline-block;
     font: normal normal normal 14px/1 FontAwesome;
     font-size: inherit;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    content: "";
-    margin-right: 0.75rem; }
+    margin-right: 0.75rem;
+    font-size: 1.35rem; }
+  main section.education p.graduate::before {
+    content: ""; }
+  main section.education p.non-graduate::before {
+    content: ""; }
   main section.education time {
     display: inline-block;
     font-size: 0.9rem;
