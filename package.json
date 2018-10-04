@@ -1,12 +1,12 @@
 {
-  "name": "pluralsight-pcheney-hands-on-rwd1",
+  "name": "responsive-resume",
   "version": "1.0.0",
   "description": "",
   "private": true,
   "scripts": {
     "build": "node-sass --watch scss -o css"
   },
-  "author": "",
+  "author": "Robert Woodall",
   "license": "ISC",
   "devDependencies": {
     "font-awesome": "^4.7.0",

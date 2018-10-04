@@ -2663,3 +2663,15 @@ I moved the media queries to wrap the contents of the medium and large files. I 
 This technique was taken from Paul Cheney's Hand's on Responsive Web Design pluralsight course.
 
 */
+@media only screen and (min-width: 560px) {
+  /* BODY */
+  /* HEADER */
+  /* NAVIGATION */
+  /* MAIN */
+  main section.about-dev {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; }
+    main section.about-dev p {
+      max-width: 50%; }
+  /* FOOTER */ }
